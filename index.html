@@ -929,209 +929,41 @@ document.querySelectorAll('.tab').forEach(tab=>{
     document.getElementById(tab.dataset.target).style.display='block'
   })
 })
-const mediaFiles = [
-  {name:"1.jpg",size:"",path:"media/1.jpg"},
-  {name:"2.jpg",size:"",path:"media/2.jpg"},
-  {name:"3.jpg",size:"",path:"media/3.jpg"},
-  {name:"4.jpg",size:"",path:"media/4.jpg"},
-  {name:"5.jpg",size:"",path:"media/5.jpg"},
-  {name:"6.jpg",size:"",path:"media/6.jpg"},
-  {name:"7.jpg",size:"",path:"media/7.jpg"},
-  {name:"8.jpg",size:"",path:"media/8.jpg"},
-  {name:"9.jpg",size:"",path:"media/9.jpg"},
-  {name:"11.jpg",size:"",path:"media/11.jpg"},
-  {name:"12.jpg",size:"",path:"media/12.jpg"},
-  {name:"13.jpg",size:"",path:"media/13.jpg"},
-  {name:"14.jpg",size:"",path:"media/14.jpg"},
-  {name:"15.jpg",size:"",path:"media/15.jpg"},
-  {name:"16.jpg",size:"",path:"media/16.jpg"},
-  {name:"17.jpg",size:"",path:"media/17.jpg"},
-  {name:"18.jpg",size:"",path:"media/18.jpg"},
-  {name:"19.jpg",size:"",path:"media/19.jpg"},
-  {name:"20.jpg",size:"",path:"media/20.jpg"},
-  {name:"21.jpg",size:"",path:"media/21.jpg"},
-  {name:"22.jpg",size:"",path:"media/22.jpg"},
-  {name:"23.jpg",size:"",path:"media/23.jpg"},
-  {name:"24.jpg",size:"",path:"media/24.jpg"},
-  {name:"25.jpg",size:"",path:"media/25.jpg"},
-  {name:"26.jpg",size:"",path:"media/26.jpg"},
-  {name:"27.jpg",size:"",path:"media/27.jpg"},
-  {name:"28.jpg",size:"",path:"media/28.jpg"},
-  {name:"29.jpg",size:"",path:"media/29.jpg"},
-  {name:"30.jpg",size:"",path:"media/30.jpg"},
-  {name:"31.jpg",size:"",path:"media/31.jpg"},
-  {name:"32.jpg",size:"",path:"media/32.jpg"},
-  {name:"33.jpg",size:"",path:"media/33.jpg"},
-  {name:"34.jpg",size:"",path:"media/34.jpg"},
-  {name:"35.jpg",size:"",path:"media/35.jpg"},
-  {name:"36.jpg",size:"",path:"media/36.jpg"},
-  {name:"37.jpg",size:"",path:"media/37.jpg"},
-  {name:"38.jpg",size:"",path:"media/38.jpg"},
-  {name:"39.jpg",size:"",path:"media/39.jpg"},
-  {name:"40.jpg",size:"",path:"media/40.jpg"},
-  {name:"41.jpg",size:"",path:"media/41.jpg"},
-  {name:"42.jpg",size:"",path:"media/42.jpg"},
-  {name:"43.jpg",size:"",path:"media/43.jpg"},
-  {name:"44.jpg",size:"",path:"media/44.jpg"},
-  {name:"45.jpg",size:"",path:"media/45.jpg"},
-  {name:"46.jpg",size:"",path:"media/46.jpg"},
-  {name:"47.jpg",size:"",path:"media/47.jpg"},
-  {name:"48.jpg",size:"",path:"media/48.jpg"},
-  {name:"49.jpg",size:"",path:"media/49.jpg"},
-  {name:"50.jpg",size:"",path:"media/50.jpg"},
-  {name:"51.jpg",size:"",path:"media/51.jpg"},
-  {name:"52.jpg",size:"",path:"media/52.jpg"},
-  {name:"53.jpg",size:"",path:"media/53.jpg"},
-  {name:"54.jpg",size:"",path:"media/54.jpg"},
-  {name:"55.jpg",size:"",path:"media/55.jpg"},
-  {name:"56.jpg",size:"",path:"media/56.jpg"},
-  {name:"57.jpg",size:"",path:"media/57.jpg"},
-  {name:"58.jpg",size:"",path:"media/58.jpg"},
-  {name:"59.jpg",size:"",path:"media/59.jpg"},
-  {name:"60.jpg",size:"",path:"media/60.jpg"},
-  {name:"61.jpg",size:"",path:"media/61.jpg"},
-  {name:"62.jpg",size:"",path:"media/62.jpg"},
-  {name:"63.jpg",size:"",path:"media/63.jpg"},
-  {name:"64.jpg",size:"",path:"media/64.jpg"},
-  {name:"66.jpg",size:"",path:"media/66.jpg"},
-  {name:"67.jpg",size:"",path:"media/67.jpg"},
-  {name:"68.jpg",size:"",path:"media/68.jpg"},
-  {name:"69.jpg",size:"",path:"media/69.jpg"},
-  {name:"70.jpg",size:"",path:"media/70.jpg"},
-  {name:"71.jpg",size:"",path:"media/71.jpg"},
-  {name:"72.jpg",size:"",path:"media/72.jpg"},
-  {name:"73.jpg",size:"",path:"media/73.jpg"},
-  {name:"74.jpg",size:"",path:"media/74.jpg"},
-  {name:"75.jpg",size:"",path:"media/75.jpg"},
-  {name:"76.jpg",size:"",path:"media/76.jpg"},
-  {name:"77.jpg",size:"",path:"media/77.jpg"},
-  {name:"78.jpg",size:"",path:"media/78.jpg"},
-  {name:"79.jpg",size:"",path:"media/79.jpg"},
-  {name:"80.jpg",size:"",path:"media/80.jpg"},
-  {name:"81.jpg",size:"",path:"media/81.jpg"},
-  {name:"82.jpg",size:"",path:"media/82.jpg"},
-  {name:"83.jpg",size:"",path:"media/83.jpg"},
-  {name:"84.jpg",size:"",path:"media/84.jpg"},
-  {name:"85.jpg",size:"",path:"media/85.jpg"},
-  {name:"86.jpg",size:"",path:"media/86.jpg"},
-  {name:"87.jpg",size:"",path:"media/87.jpg"},
-  {name:"88.jpg",size:"",path:"media/88.jpg"},
-  {name:"89.jpg",size:"",path:"media/89.jpg"},
-  {name:"90.jpg",size:"",path:"media/90.jpg"},
-  {name:"91.jpg",size:"",path:"media/91.jpg"},
-  {name:"92.jpg",size:"",path:"media/92.jpg"},
-  {name:"93.jpg",size:"",path:"media/93.jpg"},
-  {name:"94.jpg",size:"",path:"media/94.jpg"},
-  {name:"95.jpg",size:"",path:"media/95.jpg"},
-  {name:"96.jpg",size:"",path:"media/96.jpg"},
-  {name:"97.jpg",size:"",path:"media/97.jpg"},
-  {name:"98.jpg",size:"",path:"media/98.jpg"},
-  {name:"99.jpg",size:"",path:"media/99.jpg"},
-  {name:"100.jpg",size:"",path:"media/100.jpg"},
-  {name:"101.jpg",size:"",path:"media/101.jpg"},
-  {name:"102.jpg",size:"",path:"media/102.jpg"},
-  {name:"103.jpg",size:"",path:"media/103.jpg"},
-  {name:"104.jpg",size:"",path:"media/104.jpg"},
-  {name:"105.jpg",size:"",path:"media/105.jpg"},
-  {name:"106.jpg",size:"",path:"media/106.jpg"},
-  {name:"107.jpg",size:"",path:"media/107.jpg"},
-  {name:"108.jpg",size:"",path:"media/108.jpg"},
-  {name:"109.jpg",size:"",path:"media/109.jpg"},
-  {name:"110.jpg",size:"",path:"media/110.jpg"},
-  {name:"111.jpg",size:"",path:"media/111.jpg"},
-  {name:"112.jpg",size:"",path:"media/112.jpg"},
-  {name:"113.jpg",size:"",path:"media/113.jpg"},
-  {name:"114.jpg",size:"",path:"media/114.jpg"},
-  {name:"115.jpg",size:"",path:"media/115.jpg"},
-  {name:"116.jpg",size:"",path:"media/116.jpg"},
-  {name:"117.jpg",size:"",path:"media/117.jpg"},
-  {name:"118.jpg",size:"",path:"media/118.jpg"},
-  {name:"119.jpg",size:"",path:"media/119.jpg"},
-  {name:"120.jpg",size:"",path:"media/120.jpg"},
-  {name:"121.jpg",size:"",path:"media/121.jpg"},
-  {name:"122.jpg",size:"",path:"media/122.jpg"},
-  {name:"123.jpg",size:"",path:"media/123.jpg"},
-  {name:"124.jpg",size:"",path:"media/124.jpg"},
-  {name:"125.jpg",size:"",path:"media/125.jpg"},
-  {name:"126.jpg",size:"",path:"media/126.jpg"},
-  {name:"127.jpg",size:"",path:"media/127.jpg"},
-  {name:"128.jpg",size:"",path:"media/128.jpg"},
-  {name:"129.jpg",size:"",path:"media/129.jpg"},
-  {name:"130.jpg",size:"",path:"media/130.jpg"},
-  {name:"131.jpg",size:"",path:"media/131.jpg"},
-  {name:"132.jpg",size:"",path:"media/132.jpg"},
-  {name:"133.jpg",size:"",path:"media/133.jpg"},
-  {name:"134.jpg",size:"",path:"media/134.jpg"},
-  {name:"135.jpg",size:"",path:"media/135.jpg"},
-  {name:"136.jpg",size:"",path:"media/136.jpg"},
-  {name:"137.jpg",size:"",path:"media/137.jpg"},
-  {name:"138.jpg",size:"",path:"media/138.jpg"},
-  {name:"139.jpg",size:"",path:"media/139.jpg"},
-  {name:"140.jpg",size:"",path:"media/140.jpg"},
-  {name:"141.jpg",size:"",path:"media/141.jpg"},
-  {name:"142.jpg",size:"",path:"media/142.jpg"},
-  {name:"143.jpg",size:"",path:"media/143.jpg"},
-  {name:"144.jpg",size:"",path:"media/144.jpg"},
-  {name:"145.jpg",size:"",path:"media/145.jpg"},
-  {name:"146.jpg",size:"",path:"media/146.jpg"},
-  {name:"147.jpg",size:"",path:"media/147.jpg"},
-  {name:"148.jpg",size:"",path:"media/148.jpg"},
-  {name:"149.jpg",size:"",path:"media/149.jpg"},
-  {name:"150.jpg",size:"",path:"media/150.jpg"},
-  {name:"151.jpg",size:"",path:"media/151.jpg"},
-  {name:"152.jpg",size:"",path:"media/152.jpg"},
-  {name:"153.jpg",size:"",path:"media/153.jpg"},
-  {name:"154.jpg",size:"",path:"media/154.jpg"},
-  {name:"155.jpg",size:"",path:"media/155.jpg"},
-  {name:"156.jpg",size:"",path:"media/156.jpg"},
-  {name:"157.jpg",size:"",path:"media/157.jpg"},
-  {name:"158.jpg",size:"",path:"media/158.jpg"},
-  {name:"159.jpg",size:"",path:"media/159.jpg"},
-  {name:"160.jpg",size:"",path:"media/160.jpg"},
-  {name:"161.jpg",size:"",path:"media/161.jpg"},
-  {name:"162.jpg",size:"",path:"media/162.jpg"},
-  {name:"163.jpg",size:"",path:"media/163.jpg"},
-  {name:"164.jpg",size:"",path:"media/164.jpg"},
-  {name:"165.jpg",size:"",path:"media/165.jpg"},
-  {name:"166.jpg",size:"",path:"media/166.jpg"},
-  {name:"167.jpg",size:"",path:"media/167.jpg"},
-  {name:"168.jpg",size:"",path:"media/168.jpg"},
-  {name:"169.jpg",size:"",path:"media/169.jpg"},
-  {name:"170.jpg",size:"",path:"media/170.jpg"},
-  {name:"171.jpg",size:"",path:"media/171.jpg"},
-  {name:"172.jpg",size:"",path:"media/172.jpg"},
-  {name:"173.jpg",size:"",path:"media/173.jpg"},
-  {name:"174.jpg",size:"",path:"media/174.jpg"},
-  {name:"175.jpg",size:"",path:"media/175.jpg"},
-  {name:"176.jpg",size:"",path:"media/176.jpg"},
-  {name:"177.jpg",size:"",path:"media/177.jpg"},
-  {name:"178.jpg",size:"",path:"media/178.jpg"},
-  {name:"179.jpg",size:"",path:"media/179.jpg"},
-  {name:"180.jpg",size:"",path:"media/180.jpg"},
-  {name:"181.jpg",size:"",path:"media/181.jpg"}
-];
+
+
 const mediaGrid=document.querySelector('#media .grid')
-mediaGrid.innerHTML=''
-mediaFiles.forEach(f=>{
-  const thumb=document.createElement('div')
-  thumb.className='thumb'
-  if(f.path.match(/\.(jpg|png|jpeg|gif)$/i)){
-    thumb.innerHTML=`
-      <img src="${f.path}" alt="">
-      <div class="name">${f.name}</div>
-      <div class="meta">${f.size}</div>
-      <a href="${f.path}" download>⬇ دانلود</a>
+mediaGrid.innerHTML = ''
+
+// عکس‌های 1 تا 181
+for (let i = 1; i <= 181; i++) {
+  addMedia(`media/${i}.jpg`)
+}
+
+// عکس‌های 249 تا 314
+for (let i = 249; i <= 314; i++) {
+  addMedia(`media/${i}.jpg`)
+}
+
+function addMedia(path) {
+  const thumb = document.createElement('div')
+  thumb.className = 'thumb'
+
+  if (/\.(jpg|png|jpeg|gif)$/i.test(path)) {
+    thumb.innerHTML = `
+      <img src="${path}" alt="">
+      <div class="name">${path.split('/').pop()}</div>
+      <a href="${path}" download>⬇ دانلود</a>
     `
-  }else if(f.path.match(/\.(mkv|mp4)$/i)){
-    thumb.innerHTML=`
-      <video src="${f.path}" controls></video>
-      <div class="name">${f.name}</div>
-      <div class="meta">${f.size}</div>
-      <a href="${f.path}" download>⬇ دانلود</a>
+  } else if (/\.(mkv|mp4)$/i.test(path)) {
+    thumb.innerHTML = `
+      <video src="${path}" controls></video>
+      <div class="name">${path.split('/').pop()}</div>
+      <a href="${path}" download>⬇ دانلود</a>
     `
   }
+
   mediaGrid.appendChild(thumb)
-})
+  }
 const mediafFiles = [
   {name:"182.jpg",size:"",path:"media/182.jpg"},
   {name:"183.jpg",size:"",path:"media/183.jpg"},
