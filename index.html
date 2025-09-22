@@ -108,6 +108,29 @@
       color:#4da3ff;
       text-decoration:none;
     }
+    .vidgrid{
+      display:grid;
+      grid-template-columns:repeat(auto-fill, minmax(120px,1fr));
+      gap:10px;
+    }
+    .thumbv{
+      background:#222;
+      border-radius:8px;
+      padding:5px;
+      text-align:left;
+    }
+    .thumbv img,.thumbv video{
+      width:100%;height:100px;object-fit:cover;border-radius:6px
+    }
+    .thumbv .name{font-size:12px;margin-top:5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .thumbv .meta{font-size:11px;color:#aaa}
+    .thumbv a{
+      display:inline-block;
+      margin-top:5px;
+      font-size:12px;
+      color:#4da3ff;
+      text-decoration:none;
+    }
     .music-row{
       margin-bottom:15px;
       padding:12px;
@@ -213,7 +236,7 @@
       <div class="tab active" data-target="media">عکس های تکی</div>
       <div class="tab" data-target="mediaf">با رفیقا</div>
       <div class="tab" data-target="music">آهنگ ها</div>
-      <div class="tab" data-target="links">لینک ها</div>
+      <div class="tab" data-target="videos">کلیپ ها</div>
     </div>
     <div class="content">
       <div id="media" class="pane">
@@ -225,8 +248,8 @@
       <div id="music" class="pane" style="display:none">
         <div id="music-list"></div>
       </div>
-      <div id="links" class="pane" style="display:none">
-        <a href="https://m.soundcloud.com/user-165893208/">SoundCloud</a>
+      <div id="videos" class="pane" style="display:none">
+        <div class="vidgrid"></div>
       </div>
     </div>
   </div>
@@ -1000,6 +1023,29 @@ function addMediaf(path, name) {
 
   mediafGrid.appendChild(thumbf)
 }
+const vidGrid = document.querySelector('#videos .vidgrid')
+vidGrid.innerHTML = ''
+
+// رنج 330 تا 331 (mp4)
+for (let i = 330; i <= 331; i++) {
+  addVideo(`media/${i}.mp4`, `${i}.mp4`)
+}
+
+function addVideo(path, name) {
+  const thumbv = document.createElement('div')
+  thumbv.className = 'thumbv'
+
+  if (/\.(mkv|mp4)$/i.test(path)) {
+    thumbv.innerHTML = `
+      <video src="${path}" controls></video>
+      <div class="name">${name}</div>
+      <a href="${path}" download>⬇ دانلود</a>
+    `
+  }
+
+  vidGrid.appendChild(thumbv)
+}
+
 const musicFiles=[
   {name:"نمیفهمه کسی",file:"media/Nemifahme.mp3"},
   {name:"یه شب",file:"media/YeShab.mp3"},
